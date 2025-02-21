@@ -7,6 +7,7 @@ import httpx
 import re
 from dotenv import load_dotenv
 import os
+import uvicorn
 
 load_dotenv()
 
@@ -133,3 +134,7 @@ async def github_webhook(request: Request):
                 "Content-Type": "application/json"
             }
         )
+
+if __name__ == "__main__":
+    port = int(os.getenv("PORT", 8000))  # Default to 8000 if the PORT environment variable is not set
+    uvicorn.run(app, host="0.0.0.0", port=port)
