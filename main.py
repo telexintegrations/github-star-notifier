@@ -78,7 +78,7 @@ async def get_integration_config():
       "app_name": "github-star-notifier",
       "app_description": "This integration notifies my channel of a starred event on my repository",
       "app_logo": "https://www.pinterest.com/pin/883690758133210277/",
-      "app_url": "https://p7hr5wrm-8000.uks1.devtunnels.ms",
+      "app_url": "https://github-star-notifier.onrender.com",
       "background_color": "#fff"
     },
     "is_active": True,
@@ -100,7 +100,7 @@ async def get_integration_config():
         ]
       }
     ],
-    "target_url": "https://p7hr5wrm-8000.uks1.devtunnels.ms/webhook",
+    "target_url": "https://github-star-notifier.onrender.com/webhook",
   }
 }
     return JSONResponse(content=data)
@@ -138,3 +138,4 @@ async def github_webhook(request: Request):
 if __name__ == "__main__":
     port = int(os.getenv("PORT", 8000))  # Default to 8000 if the PORT environment variable is not set
     uvicorn.run(app, host="0.0.0.0", port=port)
+  
