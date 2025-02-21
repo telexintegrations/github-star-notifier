@@ -66,7 +66,7 @@ async def toggle_follow_github_user(request: Request):
                 raise HTTPException(status_code=500, detail=str(e))
 
 
-@app.get('/integration-config')
+@app.get('/integration.json')
 async def get_integration_config():
     data = {
   "data": {
