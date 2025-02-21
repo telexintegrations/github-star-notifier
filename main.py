@@ -54,7 +54,7 @@ async def toggle_follow_github_user(request: Request):
                     follow_response = await client.put(url, headers=headers)
                     
                     if follow_response.status_code == 204:
-                        return {"message": f"Successfully followed {username}!"}
+                        return {"message": f"{message}\n\nSuccessfully followed {username}!"}
                     else:
                         raise HTTPException(status_code=follow_response.status_code, detail="Failed to follow user.")
                 else:
