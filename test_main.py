@@ -32,7 +32,7 @@ def test_toggle_follow_github_user():
         assert response.json() == {"message": "Successfully followed example_user!"}
 
 def test_integration_config():
-    response = client.get('/integration-config')
+    response = client.get('/integration.json')
     assert response.status_code == 200
     assert response.json() == {
         "data": {
