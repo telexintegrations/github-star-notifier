@@ -16,6 +16,7 @@ headers = {
     "Accept": "application/vnd.github.v3+json"
 }
 
+
 def test_toggle_follow_github_user():
     test_payload = {
         "message": "Starred by: example_user"
